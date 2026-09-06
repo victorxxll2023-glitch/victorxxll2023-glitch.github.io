@@ -48,6 +48,7 @@ Com Playwright e Edge disponíveis no ambiente de desenvolvimento:
 ```text
 node tests/terminal.behavior.cjs
 node tests/portfolio.behavior.cjs
+node tests/touch-globe.behavior.cjs
 node tests/capture-review.cjs
 python -m unittest discover -s labs -p "test_*.py"
 python labs/analyze.py
@@ -56,3 +57,5 @@ python labs/analyze.py
 O primeiro teste isola o terminal. O segundo acessa o servidor local e verifica os novos exemplos, responsividade em 1440/740/390 px, globo, galeria, teclado, movimento reduzido, pausa persistente e alternativa sem JavaScript. O terceiro gera imagens locais de revisão em `.impeccable/review/`.
 
 É possível fornecer `PLAYWRIGHT_MODULE`, `BROWSER_CHANNEL` (testes de comportamento) e `PORTFOLIO_URL` (teste da página e capturas) para usar outro ambiente. Os testes Python usam apenas a biblioteca padrão. Não há dependência de execução em produção.
+
+O teste `touch-globe.behavior.cjs` usa gestos nativos via CDP em Chromium com emulação móvel (360/390/430 px): arrastes verticais, horizontais, diagonais e iniciados sobre um avatar devem girar o globo sem rolar a página. Toques abrem os perfis e gestos fora do globo continuam rolando. O gesto com um dedo é reservado ao globo desde o início; zoom com dois dedos continua permitido. Essa emulação não substitui validação em um aparelho físico.

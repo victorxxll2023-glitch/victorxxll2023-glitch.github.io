@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfólio de Victor, estudante de cybersecurity com foco em Blue Team, Red Team, Linux e análise de ameaças."
+      content="Victor Hugo, estudante em busca de estágio em cybersecurity. Projetos de estudo, Linux, Python, Blue Team e demonstrações de análise de logs."
     />
     <meta name="theme-color" content="#101210" />
-    <title>Victor | Cybersecurity</title>
+    <title>Victor Hugo | Estágio em Cybersecurity</title>
+    <link rel="canonical" href="https://victorxxll2023-glitch.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Victor Hugo | Cybersecurity" />
+    <meta property="og:description" content="Buscando estágio em cybersecurity. Projetos de estudo, demonstrações Blue Team e uma trilha de aprendizado em segurança." />
+    <meta property="og:image" content="https://victorxxll2023-glitch.github.io/assets/cyber-guide-preview.jpg" />
+    <meta property="og:url" content="https://victorxxll2023-glitch.github.io/" />
+    <link rel="icon" href="assets/cyber-aura-avatar.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://github.com" />
@@ -16,15 +23,25 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;450;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=hacker-20260906" />
+    <link rel="stylesheet" href="styles.css?v=recruiter-20260906" />
     <link rel="stylesheet" href="hacker-character.css?v=20260906" />
     <link rel="stylesheet" href="boot-sequence.css?v=terminal-20260905" />
-    <script src="script.js?v=terminal-20260905" defer></script>
+    <link rel="stylesheet" href="recruiter.css?v=20260906" />
+    <script src="lab-explorer.js?v=20260906" defer></script>
+    <script src="script.js?v=recruiter-20260906" defer></script>
     <script src="boot-sequence.js?v=terminal-20260905" defer></script>
     <script src="hacker-character.js?v=20260906" defer></script>
     <script src="interactive-effects.js?v=hacker-20260906" defer></script>
   </head>
   <body>
+    <!--
+    THESIS: A student's evidence-first cybersecurity portfolio, not fabricated operational telemetry.
+    OWN-WORLD: Preserve graphite, muted green, IBM Plex Mono, fine borders and the existing 2D hacker mascot.
+    STORY: Understand the internship goal; inspect a real study project and explicitly synthetic cases; contact Victor on LinkedIn.
+    FIRST VIEWPORT: Name, Blue Team/SOC internship intent and project/contact actions on the left; contained mascot on the right, stacked on mobile. Optional terminal below. The signature interaction traces evidence into a provisional hypothesis with manual steps and pausable motion.
+    FORM: Code-led extension of the established terminal world. No new-world selection, ordered tournament or seed applies.
+    FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+    -->
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
     <header class="topbar" aria-label="Navegação principal">
@@ -37,11 +54,12 @@
 
       <nav class="desktop-nav" aria-label="Seções do site">
         <a href="#inicio" class="active">~/início</a>
+        <a href="#projetos">projetos/</a>
+        <a href="#laboratorios">laboratórios/</a>
         <a href="#sobre">sobre.md</a>
-        <a href="#projetos">radar/</a>
         <a href="#habilidades">ferramentas/</a>
         <a href="#estudos">estudos/</a>
-        <a href="#rede">rede/</a>
+
         <a href="#contato">contato</a>
       </nav>
 
@@ -49,26 +67,22 @@
 
     <main id="conteudo">
       <section class="hero" id="inicio" aria-labelledby="hero-title">
-        <div class="window-bar"><span><i class="status-dot" aria-hidden="true"></i> ~/victor — terminal do portfólio</span><span class="window-format">UTF-8</span></div>
+        <div class="window-bar"><span><i class="status-dot" aria-hidden="true"></i> ~/victor / cybersecurity</span><span class="window-format">UTF-8</span></div>
         <div class="hero-layout">
           <div class="hero-copy">
             <p class="command-line"><span>victor@cyberlab</span><b>~</b>$ whoami</p>
-            <h1 id="hero-title">Victor<span class="terminal-caret" aria-hidden="true">_</span></h1>
-            <p class="hero-subtitle">Entender o ataque.<br /><span>Aprender a defender.</span></p>
-            <p class="hero-intro">Estudante de cybersecurity. Entre logs, redes e linhas de comando, exploro Blue Team e Red Team em ambientes controlados.</p>
-            <dl class="profile-properties">
-              <div><dt>foco</dt><dd>detecção / investigação / segurança ofensiva</dd></div>
-              <div><dt>base</dt><dd>Linux, Python e muita curiosidade</dd></div>
-              <div><dt>status</dt><dd><span class="learning-status">em aprendizado contínuo</span></dd></div>
-            </dl>
+            <h1 id="hero-title">Victor Hugo<span class="terminal-caret" aria-hidden="true">_</span></h1>
+            <p class="hero-subtitle">Aprendendo a investigar.<br /><span>Construindo minha base em defesa.</span></p>
+            <p class="hero-intro">Busco estágio em cybersecurity, com interesse em Blue Team e SOC. Estudo Linux, Python e segurança em ambientes controlados.</p>
+            <p class="career-status">Disponível para conversar sobre estágio</p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#estudos"><span aria-hidden="true">↳</span> Explorar estudos</a>
-              <a class="button button-secondary" href="#sobre">Ler sobre mim <span aria-hidden="true">↗</span></a>
+              <a class="button button-primary" href="#projetos">Ver meus projetos <span aria-hidden="true">↗</span></a>
+              <a class="button button-secondary" href="https://www.linkedin.com/in/victor-hugo-053686306/" target="_blank" rel="noreferrer">Conversar no LinkedIn <span aria-hidden="true">↗</span></a>
             </div>
           </div>
           <figure class="hero-art hacker-art">
             <div class="hacker-stage">
-              <span class="hacker-file" aria-hidden="true">~/avatar/ghost_01</span>
+
               <span class="hacker-crosshair crosshair-top" aria-hidden="true"></span>
               <span class="hacker-crosshair crosshair-bottom" aria-hidden="true"></span>
               <div class="hacker-orbit" aria-hidden="true"></div>
@@ -86,7 +100,7 @@
             </div>
           </figure>
         </div>
-        <div class="command-console">
+        <details class="terminal-disclosure"><summary>Abrir terminal interativo <span>help / whoami / projetos</span></summary><div class="command-console">
           <div class="console-guide"><span>Explore pelo terminal ou role a página.</span><span><kbd>Tab</kbd> completar <kbd>↑</kbd> histórico</span></div>
           <div id="terminal-output" role="log" aria-live="polite" aria-relevant="additions text" aria-label="Saída dos comandos"></div>
           <form class="terminal-form" aria-label="Terminal interativo do portfólio">
@@ -94,15 +108,91 @@
             <input id="terminal-input" name="command" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="120" placeholder="Digite help para começar…" aria-label="Comando do portfólio" aria-describedby="terminal-hint" />
             <button type="submit" aria-label="Executar comando"><span aria-hidden="true">↵</span></button>
           </form>
-          <div class="quick-commands" id="terminal-hint"><span>comandos:</span><button type="button" data-command="help">help</button><button type="button" data-command="whoami">whoami</button><button type="button" data-command="estudos">estudos</button><button type="button" data-command="rede">rede</button><button type="button" data-replay-boot>rever abertura</button><span class="console-local">somente neste site</span></div>
+          <div class="quick-commands" id="terminal-hint"><span>comandos:</span><button type="button" data-command="help">help</button><button type="button" data-command="whoami">whoami</button><button type="button" data-command="projetos">projetos</button><button type="button" data-command="laboratorios">laboratórios</button><button type="button" data-replay-boot>rever abertura</button><button type="button" class="motion-toggle" aria-pressed="false"><span class="motion-label">Pausar animações</span></button></div>
+        </div></details>
+      </section>
+
+      <section class="section featured-work" id="projetos" aria-labelledby="work-title">
+        <div class="work-heading">
+          <h2 id="work-title">Meu estudo, em prática<span class="accent">.</span></h2>
+          <p>Projetos abertos para explorar o conteúdo, ler o código e acompanhar minha evolução.</p>
         </div>
+        <article class="featured-project">
+          <a class="project-preview" href="https://victorxxll2023-glitch.github.io/cybersecurity-interactive-guide/" target="_blank" rel="noreferrer" aria-label="Explorar a Trilha CyberSec">
+            <img src="assets/cyber-guide-preview.jpg" width="1280" height="820" loading="lazy" alt="Captura real da Trilha CyberSec, com navegação de estudos em cibersegurança." />
+            <span class="preview-action">Explorar projeto <span aria-hidden="true">↗</span></span>
+          </a>
+          <div class="featured-project-copy">
+            <h3>Trilha CyberSec</h3>
+            <p>Projeto de estudo publicado: um guia interativo em português para organizar o aprendizado de redes, segurança ofensiva e defesa.</p>
+            <dl class="project-facts">
+              <div><dt>Proposta</dt><dd>Conectar fundamentos, ferramentas e caminhos de estudo em uma experiência consultável.</dd></div>
+              <div><dt>O que explorar</dt><dd>Trilhas por tema, busca, quiz e registro de progresso no navegador.</dd></div>
+              <div><dt>Transparência</dt><dd>Projeto pessoal com apoio de IA e materiais de terceiros creditados no repositório.</dd></div>
+            </dl>
+            <div class="project-links">
+              <a class="button button-primary" href="https://victorxxll2023-glitch.github.io/cybersecurity-interactive-guide/" target="_blank" rel="noreferrer">Abrir guia <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://github.com/victorxxll2023-glitch/cybersecurity-interactive-guide" target="_blank" rel="noreferrer">Código e créditos <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="writeups-row">
+          <div><h3>Security Write-ups</h3><p>Meu acervo de análises Blue Team e SOC está começando. A apresentação já está publicada; os relatórios de laboratório ainda serão adicionados.</p></div>
+          <a class="text-link" href="https://github.com/victorxxll2023-glitch/security-writeups" target="_blank" rel="noreferrer">Acompanhar acervo <span aria-hidden="true">↗</span></a>
+        </article>
+      </section>
+
+      <section class="section investigation" id="laboratorios" aria-labelledby="lab-title">
+        <div class="lab-heading">
+          <h2 id="lab-title">Um alerta não conta<br />a história inteira<span class="accent">.</span></h2>
+          <p>Do evento à hipótese: explore dois exemplos de raciocínio defensivo, com dados sintéticos e análise reproduzível em Python.</p>
+        </div>
+        <div class="lab-workbench">
+          <div class="lab-selector" role="group" aria-label="Escolher demonstração">
+            <button type="button" data-lab-case="ssh" aria-pressed="true" aria-controls="lab-content" disabled>Autenticação SSH</button>
+            <button type="button" data-lab-case="integrity" aria-pressed="false" aria-controls="lab-content" disabled>Integridade de arquivos</button>
+            <span class="simulation-label">Demonstração / dados simulados</span>
+          </div>
+          <div id="lab-content">
+            <div class="lab-evidence">
+              <p class="evidence-file" id="evidence-file">fixture / auth-events.json</p>
+              <h3 id="evidence-title">Falhas seguidas de um acesso</h3>
+              <pre id="evidence-log" tabindex="0" aria-label="Amostra de eventos sintéticos">09:00:00  falha    ana   192.0.2.44
+09:00:08  falha    ana   192.0.2.44
+09:00:16  falha    ana   192.0.2.44
+09:00:24  falha    ana   192.0.2.44
+09:00:32  falha    ana   192.0.2.44
+09:00:40  falha    ana   192.0.2.44
+09:00:48  sucesso  ana   192.0.2.44</pre>
+              <p class="evidence-note">Amostra fictícia. Nenhum comando é executado e nenhuma rede é acessada.</p>
+              <div class="signal-route" aria-hidden="true"><span>EVENTO</span><i><b></b></i><span>CONTEXTO</span><i><b></b></i><span>HIPÓTESE</span></div>
+            </div>
+            <div class="lab-analysis">
+              <ol class="investigation-steps" aria-label="Etapas de investigação">
+                <li><button type="button" data-lab-step="0" aria-current="step" disabled><span>01</span> Observar</button></li>
+                <li><button type="button" data-lab-step="1" disabled><span>02</span> Correlacionar</button></li>
+                <li><button type="button" data-lab-step="2" disabled><span>03</span> Concluir</button></li>
+              </ol>
+              <div class="analysis-copy">
+                <h3 id="analysis-title">O que aconteceu?</h3>
+                <p id="analysis-text">A amostra contém seis falhas de autenticação e um sucesso para a mesma conta e origem. Primeiro, preservo a sequência e os horários.</p>
+                <div class="analyst-question"><span>PERGUNTA DE TRIAGEM</span><p id="analysis-question">O acesso era esperado para essa conta, origem e horário?</p></div>
+              </div>
+              <div class="lab-controls"><button class="button button-secondary" type="button" id="lab-play" hidden>Reproduzir análise</button><output id="lab-progress" aria-live="polite" aria-atomic="true">Etapa 1 de 3</output></div>
+            </div>
+          </div>
+          <div class="lab-resources">
+            <p>Exemplos didáticos criados com apoio de IA. Não são incidentes reais nem comprovação de experiência profissional.</p>
+            <noscript><p>A visualização interativa usa JavaScript. Os dois exemplos completos estão disponíveis no roteiro abaixo.</p></noscript>
+            <a href="https://github.com/victorxxll2023-glitch/victorxxll2023-glitch.github.io/tree/main/labs" target="_blank" rel="noreferrer">Dados, Python e roteiro <span aria-hidden="true">↗</span></a>
+            <a href="labs/README.md" download="roteiro-blue-team.md">Baixar roteiro <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <div class="next-lab"><strong>Próximo passo: laboratório com Wazuh</strong><p>Coletar eventos de uma máquina Linux, revisar um alerta e publicar evidências sanitizadas. Planejado, ainda sem relatório de execução.</p><a href="https://documentation.wazuh.com/current/proof-of-concept-guide/index.html" target="_blank" rel="noreferrer">Referência oficial <span aria-hidden="true">↗</span></a></div>
       </section>
 
       <section class="section about" id="sobre" aria-labelledby="about-title">
-        <div class="section-label reveal">
-          <span aria-hidden="true">~ /</span>
-          <p>sobre.md</p>
-        </div>
+        
         <div class="cyber-terminal reveal" role="region" aria-labelledby="about-title">
           <div class="terminal-chrome">
             <p><span aria-hidden="true">$</span> cat sobre.md</p>
@@ -110,7 +200,6 @@
           </div>
           <div class="terminal-screen">
             <div class="terminal-command">
-              <p class="comment"># O que me move</p>
               <h2 id="about-title">Curiosidade com método.</h2>
             </div>
             <div class="terminal-output-grid">
@@ -161,72 +250,19 @@
         </div>
       </section>
 
-      <section class="section projects" id="projetos" aria-labelledby="projects-title">
-        <div class="section-label reveal">
-          <span aria-hidden="true">~ /</span>
-          <p>radar/leituras</p>
-        </div>
-        <div class="projects-heading reveal">
-          <h2 id="projects-title">No meu radar<span class="accent">.</span></h2>
-          <p>Leituras para entender o cenário de ameaças. Fontes abertas, perguntas novas.</p>
-        </div>
-
-        <div class="project-list">
-          <a class="project-card reveal" href="https://genai.owasp.org/2025/12/09/owasp-genai-security-project-releases-top-10-risks-and-mitigations-for-agentic-ai-security/" target="_blank" rel="noreferrer" aria-label="Ler sobre segurança de IA e agentes na OWASP">
-            <div class="project-index">01 / 03</div>
-            <div class="project-info">
-              <div>
-                <p class="project-type">OWASP / Agentic AI / 2025</p>
-                <h3>Quem protege os agentes de IA?</h3>
-              </div>
-              <p>Injeção de instruções, abuso de ferramentas e permissões: novos riscos quando a IA deixa de apenas responder e passa a agir.</p>
-              <ul aria-label="Tecnologias">
-                <li>Agentic AI</li><li>Prompt injection</li><li>Privilégios</li>
-              </ul>
-            </div>
-            <span class="project-arrow" aria-hidden="true">↗</span>
-          </a>
-
-          <a class="project-card reveal" href="https://www.microsoft.com/en-us/corporate-responsibility/cybersecurity/microsoft-digital-defense-report-2025" target="_blank" rel="noreferrer" aria-label="Ler sobre ataques de identidade no Microsoft Digital Defense Report">
-            <div class="project-index">02 / 03</div>
-            <div class="project-info">
-              <div>
-                <p class="project-type">Microsoft / Digital Defense Report / 2025</p>
-                <h3>Identidades sob ataque</h3>
-              </div>
-              <p>Password spray, roubo de sessão e infostealers mantêm credenciais e acessos no centro da defesa.</p>
-              <ul aria-label="Tecnologias">
-                <li>Infostealers</li><li>MFA</li><li>Passkeys</li>
-              </ul>
-            </div>
-            <span class="project-arrow" aria-hidden="true">↗</span>
-          </a>
-
-          <a class="project-card reveal" href="https://www.enisa.europa.eu/publications/enisa-threat-landscape-2025" target="_blank" rel="noreferrer" aria-label="Ler o panorama de ameaças 2025 da ENISA">
-            <div class="project-index">03 / 03</div>
-            <div class="project-info">
-              <div>
-                <p class="project-type">ENISA / Threat Landscape / 2025</p>
-                <h3>Ransomware &amp; exposição</h3>
-              </div>
-              <p>Phishing, falhas exploradas e dependências de terceiros continuam abrindo caminho para intrusão e extorsão.</p>
-              <ul aria-label="Tecnologias">
-                <li>Ransomware</li><li>Vulnerabilidades</li><li>Supply Chain</li>
-              </ul>
-            </div>
-            <span class="project-arrow" aria-hidden="true">↗</span>
-          </a>
-        </div>
-
-        <p class="project-note reveal"><span aria-hidden="true">↳</span> Referências de estudo, não projetos de minha autoria. Cada entrada abre a publicação oficial.</p>
-        <div class="repo-strip"><p><strong>Também estou construindo meu acervo.</strong>Write-ups e um guia de cybersecurity no meu GitHub.</p><a href="https://github.com/victorxxll2023-glitch?tab=repositories" target="_blank" rel="noreferrer">Ver meus repositórios ↗</a></div>
+      <section class="section radar-compact" id="radar" aria-labelledby="radar-title">
+        <details>
+          <summary id="radar-title">Leituras que acompanho <span>OWASP / Microsoft / ENISA</span></summary>
+          <div class="reading-links">
+            <a href="https://genai.owasp.org/2025/12/09/owasp-genai-security-project-releases-top-10-risks-and-mitigations-for-agentic-ai-security/" target="_blank" rel="noreferrer">Segurança de agentes de IA <span>OWASP ↗</span></a>
+            <a href="https://www.microsoft.com/en-us/corporate-responsibility/cybersecurity/microsoft-digital-defense-report-2025" target="_blank" rel="noreferrer">Identidade e ameaças digitais <span>Microsoft ↗</span></a>
+            <a href="https://www.enisa.europa.eu/publications/enisa-threat-landscape-2025" target="_blank" rel="noreferrer">Panorama de ameaças <span>ENISA ↗</span></a>
+          </div>
+        </details>
       </section>
 
       <section class="section skills" id="habilidades" aria-labelledby="skills-title">
-        <div class="section-label reveal">
-          <span aria-hidden="true">~ /</span>
-          <p>ferramentas/</p>
-        </div>
+        
         <div class="skills-layout">
           <div class="skills-intro reveal">
             <h2 id="skills-title">Do alerta<br />à resposta<span class="accent">.</span></h2>
@@ -298,15 +334,12 @@
       </section>
 
       <section class="section learning" id="estudos" aria-labelledby="learning-title">
-        <div class="section-label reveal">
-          <span aria-hidden="true">~ /</span>
-          <p>estudos/laboratório</p>
-        </div>
+        
         <div class="learning-heading reveal">
           <h2 id="learning-title">Um comando de cada vez<span class="accent">.</span></h2>
         </div>
         <p class="learning-intro reveal">
-          Ferramentas e fundamentos que pratico em laboratórios controlados para aprender defesa, ataque e investigação.
+          Ferramentas e fundamentos que fazem parte da minha trilha de estudos em defesa, ataque e investigação.
         </p>
 
         <div class="gallery-stage reveal">
@@ -318,42 +351,42 @@
             <article class="learning-card linux-card">
               <img src="assets/linux.svg" width="180" height="180" loading="lazy" alt="Logotipo do Linux" />
               <span class="learning-index">01</span>
-              <div><p>Sistemas &amp; terminal</p><h3>Linux &amp; Shell</h3><small>Comandos, permissões, processos e automação.</small></div>
+              <div><h3>Linux &amp; Shell</h3><small>Comandos, permissões, processos e automação.</small></div>
             </article>
             <article class="learning-card python-card">
               <img src="assets/python-security.svg" width="180" height="180" loading="lazy" alt="Símbolo de Python para segurança" />
               <span class="learning-index">02</span>
-              <div><p>Automação &amp; análise</p><h3>Python</h3><small>Scripts, parsing de logs e automação de tarefas repetitivas.</small></div>
+              <div><h3>Python</h3><small>Scripts, parsing de logs e automação de tarefas repetitivas.</small></div>
             </article>
             <article class="learning-card wazuh-card">
               <img src="assets/wazuh.svg" width="180" height="180" loading="lazy" alt="Símbolo do Wazuh" />
               <span class="learning-index">03</span>
-              <div><p>SIEM &amp; XDR</p><h3>Wazuh</h3><small>Telemetria, alertas, integridade de arquivos e vulnerabilidades.</small></div>
+              <div><h3>Wazuh</h3><small>Laboratório planejado: telemetria, alertas e integridade de arquivos.</small></div>
             </article>
             <article class="learning-card nmap-card">
               <img src="assets/nmap.svg" width="180" height="180" loading="lazy" alt="Radar representando o Nmap" />
               <span class="learning-index">04</span>
-              <div><p>Descoberta de rede</p><h3>Nmap</h3><small>Hosts, portas e serviços em redes próprias ou autorizadas.</small></div>
+              <div><h3>Nmap</h3><small>Hosts, portas e serviços em redes próprias ou autorizadas.</small></div>
             </article>
             <article class="learning-card wireshark-card">
               <img src="assets/wireshark.svg" width="180" height="180" loading="lazy" alt="Onda de pacotes representando o Wireshark" />
               <span class="learning-index">05</span>
-              <div><p>Análise de tráfego</p><h3>Wireshark</h3><small>Captura, filtros, protocolos e investigação de pacotes.</small></div>
+              <div><h3>Wireshark</h3><small>Captura, filtros, protocolos e investigação de pacotes.</small></div>
             </article>
             <article class="learning-card burp-card">
               <img src="assets/burp-suite.svg" width="180" height="180" loading="lazy" alt="Símbolo de proxy representando o Burp Suite" />
               <span class="learning-index">06</span>
-              <div><p>Segurança web</p><h3>Burp Suite</h3><small>Inspeção de HTTP e testes manuais em aplicações de laboratório.</small></div>
+              <div><h3>Burp Suite</h3><small>Inspeção de HTTP e testes manuais em aplicações de laboratório.</small></div>
             </article>
             <article class="learning-card mitre-card">
               <img src="assets/mitre-attack.svg" width="180" height="180" loading="lazy" alt="Matriz representando o MITRE ATT&CK" />
               <span class="learning-index">07</span>
-              <div><p>Táticas &amp; técnicas</p><h3>MITRE ATT&amp;CK</h3><small>Uma linguagem comum para mapear comportamento adversário e detecções.</small></div>
+              <div><h3>MITRE ATT&amp;CK</h3><small>Uma linguagem comum para mapear comportamento adversário e detecções.</small></div>
             </article>
             <article class="learning-card suricata-card">
               <img src="assets/suricata.svg" width="180" height="180" loading="lazy" alt="Olho de monitoramento representando o Suricata" />
               <span class="learning-index">08</span>
-              <div><p>IDS · IPS · NSM</p><h3>Suricata</h3><small>Monitoramento de rede, regras e detecção de tráfego suspeito.</small></div>
+              <div><h3>Suricata</h3><small>Monitoramento de rede, regras e detecção de tráfego suspeito.</small></div>
             </article>
           </div>
           <button class="gallery-nav gallery-next" type="button" aria-label="Ver próximo estudo">
@@ -369,17 +402,13 @@
       </section>
 
       <section class="section network" id="rede" aria-labelledby="network-title">
-        <div class="section-label reveal">
-          <span aria-hidden="true">~ /</span>
-          <p>rede/referências</p>
-        </div>
+        
         <div class="network-layout">
           <div class="network-copy reveal">
             <p class="command-line"><span>$</span> explore --community br</p>
-            <h2 id="network-title">Ninguém aprende<br />sozinho<span class="accent">.</span></h2>
+            <h2 id="network-title">Minhas referências<span class="accent">.</span></h2>
             <p>
-              Uma constelação de brasileiras e brasileiros que fortalecem tecnologia, educação, código aberto e
-              segurança digital. Arraste a esfera e selecione um perfil para conhecer sua história.
+              Pessoas que acompanho para aprender sobre segurança, tecnologia e educação. Referências de estudo, sem vínculo profissional ou endosso.
             </p>
             <p class="network-note">Segurança, código aberto e educação.<br />Referências que compartilham conhecimento.</p>
             <p class="network-instructions"><kbd>↔</kbd> Arraste para girar<br /><kbd>↵</kbd> Selecione uma pessoa para saber mais</p>
@@ -421,22 +450,22 @@
         <div class="window-bar"><span>$ cat contato.conf</span><span>CONEXÕES</span></div>
         <div class="contact-content">
         <p class="comment"># Uma conversa também é um ponto de partida.</p>
-        <h2 id="contact-title">Vamos trocar conhecimento<span class="accent">?</span></h2>
+        <h2 id="contact-title">Sua equipe tem espaço<br />para quem quer aprender<span class="accent">?</span></h2>
         <p class="contact-copy reveal">
-          Estou aberto a oportunidades, comunidades, estudos e boas conversas sobre segurança da informação.
+          Busco estágio em cybersecurity, especialmente em Blue Team e SOC. Vamos conversar sobre como posso aprender e contribuir com a sua equipe.
         </p>
-        <p class="contact-pending"><span aria-hidden="true">[ + ]</span> Me encontre no GitHub e no LinkedIn. Instagram: em breve.</p>
+
         <div class="contact-links" aria-label="Meus canais de contato">
           <a href="https://github.com/victorxxll2023-glitch" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.97.1-.75.4-1.26.73-1.55-2.57-.3-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.16 1.18A10.98 10.98 0 0 1 12 6.13c.98 0 1.95.13 2.87.39 2.2-1.49 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.78 1.07.78 2.16v3.24c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .7Z" /></svg>GitHub <span aria-hidden="true">↗</span></a>
           <a href="https://www.linkedin.com/in/victor-hugo-053686306/" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V8.99h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.37 4.27 5.46v6.28ZM5.32 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.1 20.45H3.54V8.99H7.1v11.46Z" /></svg>LinkedIn <span aria-hidden="true">↗</span></a>
-          <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2"/></svg>Instagram <small>pendente</small></span>
+
         </div></div>
       </section>
     </main>
 
     <footer>
       <p><span class="accent">victor@cyberlab</span> · <span id="year"></span></p>
-      <span class="footer-note">Sempre em modo de aprendizado.</span>
+      <button class="footer-motion" type="button" data-command="efeitos">Pausar / retomar animações</button>
       <a href="#inicio">cd ~ <span aria-hidden="true">↑</span><span class="sr-only">Voltar ao início</span></a>
     </footer>
 

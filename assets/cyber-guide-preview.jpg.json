@@ -1,0 +1,6 @@
+{
+  "prompt": "Source: screenshot of the public Trilha CyberSec study project at https://victorxxll2023-glitch.github.io/cybersecurity-interactive-guide/ on 2026-09-06. Captured with Playwright at 1280x820; JPEG quality 85. Real rendered website, not generated evidence or a security incident. Project source and third-party/AI credits: https://github.com/victorxxll2023-glitch/cybersecurity-interactive-guide. Capture procedure: tests/capture-review.cjs --guide.",
+  "type": "source-provenance",
+  "sourceUrl": "https://victorxxll2023-glitch.github.io/cybersecurity-interactive-guide/",
+  "capturedAt": "2026-09-06"
+}

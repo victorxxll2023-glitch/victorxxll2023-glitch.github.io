@@ -1,0 +1,4 @@
+[
+  {"path":"config/app.conf","before":"debug=false\n","after":"debug=true\n"},
+  {"path":"notes/readme.txt","before":"Laboratorio isolado.\n","after":"Laboratorio isolado.\n"}
+]

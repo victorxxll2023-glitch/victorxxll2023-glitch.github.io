@@ -1,0 +1,10 @@
+[
+  {"time":"2026-01-01T09:00:00Z","user":"ana","source":"192.0.2.44","result":"failed"},
+  {"time":"2026-01-01T09:00:08Z","user":"ana","source":"192.0.2.44","result":"failed"},
+  {"time":"2026-01-01T09:00:16Z","user":"ana","source":"192.0.2.44","result":"failed"},
+  {"time":"2026-01-01T09:00:24Z","user":"ana","source":"192.0.2.44","result":"failed"},
+  {"time":"2026-01-01T09:00:32Z","user":"ana","source":"192.0.2.44","result":"failed"},
+  {"time":"2026-01-01T09:00:40Z","user":"ana","source":"192.0.2.44","result":"failed"},
+  {"time":"2026-01-01T09:00:48Z","user":"ana","source":"192.0.2.44","result":"accepted"},
+  {"time":"2026-01-01T09:01:00Z","user":"bia","source":"192.0.2.20","result":"accepted"}
+]

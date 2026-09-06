@@ -45,7 +45,15 @@
         ? "Efeitos desativados pela preferência de movimento reduzido do seu dispositivo."
         : paused ? "Retomar efeitos visuais" : "Pausar efeitos visuais";
     }
-    if (motionLabel) motionLabel.textContent = paused ? "efeitos: off" : "efeitos: on";
+    const motionText = motionPreference.matches ? 'Movimento reduzido' : paused ? 'Retomar animações' : 'Pausar animações';
+    if (motionLabel) motionLabel.textContent = motionText;
+    const footerMotion = document.querySelector('.footer-motion');
+    if (footerMotion) {
+      footerMotion.textContent = motionText;
+      footerMotion.setAttribute('aria-pressed', String(paused));
+      footerMotion.disabled = motionPreference.matches;
+      footerMotion.title = motionPreference.matches ? 'Preferência de movimento reduzido do seu dispositivo.' : motionText;
+    }
     if (!cursorEnabled()) hideCursor();
     window.dispatchEvent(new CustomEvent("portfolio-motion", { detail: { paused } }));
   }
@@ -162,15 +170,16 @@
   const terminalForm = document.querySelector(".terminal-form");
   const terminalInput = document.querySelector("#terminal-input");
   const terminalOutput = document.querySelector("#terminal-output");
-  const commandNames = ["help", "whoami", "ls", "sobre", "radar", "projetos", "ferramentas", "stack", "estudos", "rede", "contato", "clear", "efeitos", "intro"];
+  const commandNames = ["help", "whoami", "ls", "sobre", "radar", "projetos", "laboratorios", "ferramentas", "stack", "estudos", "rede", "contato", "clear", "efeitos", "intro"];
   const commandHistory = [];
   let historyIndex = 0;
   let draftCommand = "";
 
   const sectionCommands = {
     sobre: { id: "sobre", text: "Victor — estudante de cybersecurity. Explorando Blue Team, Red Team, Linux e redes, com prática em ambientes de estudo." },
-    radar: { id: "projetos", text: "Abrindo o radar de projetos: ideias e estudos que quero transformar em prática." },
-    projetos: { id: "projetos", text: "Abrindo o radar: leituras de cybersecurity e acesso aos meus repositórios." },
+    radar: { id: "radar", text: "Abrindo as referências externas que acompanho." },
+    projetos: { id: "projetos", text: "Abrindo meus projetos de estudo e repositórios públicos." },
+    laboratorios: { id: "laboratorios", text: "Abrindo as demonstrações didáticas de autenticação e integridade. Dados sintéticos, sem acesso à rede." },
     ferramentas: { id: "habilidades", text: "Abrindo as ferramentas que fazem parte dos meus estudos em cybersecurity." },
     stack: { id: "habilidades", text: "Abrindo as ferramentas que fazem parte dos meus estudos em cybersecurity." },
     estudos: { id: "estudos", text: "Abrindo os estudos: fundamentos, ferramentas e prática em laboratório." },
@@ -198,6 +207,7 @@
   function openSection(id) {
     const section = document.getElementById(id);
     if (!section) return;
+    if (id === 'radar') section.querySelector('details')?.setAttribute('open', '');
     setActiveSection(id);
     section.scrollIntoView({ behavior: "instant", block: "start" });
     const destination = section.querySelector("h1, h2") || section;
@@ -222,11 +232,11 @@
     if (normalized === "clear") {
       terminalOutput?.replaceChildren();
     } else if (normalized === "help") {
-      appendOutput(command, "whoami · sobre → perfil\nls → diretórios\nradar · projetos → leituras e repositórios\nferramentas · stack → ferramentas\nestudos → laboratório\nrede → referências\ncontato → vamos conversar\nefeitos → pausar ou retomar animações\nintro → rever abertura visual\nclear → limpar a sessão\n↑ ↓ histórico · Tab completar · Esc limpar entrada");
+      appendOutput(command, "whoami · sobre → perfil\nls → diretórios\nprojetos → trabalhos publicados\nlaboratorios → demonstrações Blue Team\nradar → leituras externas\nferramentas · stack → ferramentas\nestudos → trilha de estudo\nrede → referências\ncontato → falar sobre estágio\nefeitos → pausar ou retomar animações\nintro → rever abertura visual\nclear → limpar a sessão\n↑ ↓ histórico · Tab completar · Esc limpar entrada");
     } else if (normalized === "whoami") {
-      appendOutput(command, "Victor\nEstudante de cybersecurity. Aprendendo sobre defesa, análise de ameaças, redes e segurança ofensiva em laboratório.");
+      appendOutput(command, "Victor Hugo\nEstudante de cybersecurity em busca de estágio, com interesse em Blue Team e SOC. Estudando Linux, Python e segurança em ambientes controlados.");
     } else if (normalized === "ls") {
-      appendOutput(command, "sobre/  projetos/  ferramentas/\nestudos/  rede/  contato/\nDigite o nome de um diretório para explorar.");
+      appendOutput(command, "sobre/  projetos/  laboratorios/\nferramentas/  estudos/  rede/  radar/  contato/\nDigite o nome de um diretório para explorar.");
     } else if (normalized === "efeitos") {
       appendOutput(command, toggleMotion());
     } else if (normalized === "intro") {

@@ -12,7 +12,7 @@ body { margin: 0; } main section { height: 500px; }
 <div class="cursor-follower"></div><button data-command="help">Ajuda</button>
 <form class="terminal-form"><label for="terminal-input">Comando</label><input id="terminal-input"><button>Executar</button></form>
 <div id="terminal-output"></div><main>
-${["sobre", "projetos", "habilidades", "estudos", "rede", "contato"].map((id) => `<section id="${id}">${id}</section>`).join("")}
+${["sobre", "projetos", "laboratorios", "radar", "habilidades", "estudos", "rede", "contato"].map((id) => `<section id="${id}">${id}</section>`).join("")}
 </main><span id="year"></span></body></html>`;
 
 (async () => {
@@ -55,7 +55,7 @@ ${["sobre", "projetos", "habilidades", "estudos", "rede", "contato"].map((id) =>
     assert.equal(await page.locator("#terminal-output img").count(), 0, "Input must be rendered as plain text");
     await run("constructor");
     assert.match(await page.locator(".terminal-response").last().innerText(), /Comando não encontrado/);
-    for (const [command, section] of [["sobre", "sobre"], ["radar", "projetos"], ["projetos", "projetos"], ["ferramentas", "habilidades"], ["stack", "habilidades"], ["estudos", "estudos"], ["rede", "rede"], ["contato", "contato"]]) {
+    for (const [command, section] of [["sobre", "sobre"], ["radar", "radar"], ["projetos", "projetos"], ["laboratorios", "laboratorios"], ["ferramentas", "habilidades"], ["stack", "habilidades"], ["estudos", "estudos"], ["rede", "rede"], ["contato", "contato"]]) {
       await run(command);
       assert.equal(new URL(page.url()).hash, `#${section}`);
     }
@@ -66,11 +66,11 @@ ${["sobre", "projetos", "habilidades", "estudos", "rede", "contato"].map((id) =>
 
     await run("efeitos");
     assert.equal(await page.locator("html").evaluate((node) => node.classList.contains("motion-paused")), true);
-    assert.equal(await page.locator(".motion-label").innerText(), "efeitos: off");
+    assert.equal(await page.locator(".motion-label").innerText(), "Retomar animações");
     await start();
     assert.equal(await page.locator(".motion-toggle").getAttribute("aria-pressed"), "true", "Pause preference must persist");
     await page.locator(".motion-toggle").click();
-    assert.equal(await page.locator(".motion-label").innerText(), "efeitos: on");
+    assert.equal(await page.locator(".motion-label").innerText(), "Pausar animações");
     await page.mouse.move(640, 400);
     assert.equal(await page.locator(".cursor-follower").evaluate((node) => node.classList.contains("is-visible")), true);
     await page.emulateMedia({ reducedMotion: "reduce" });

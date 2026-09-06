@@ -1,0 +1,145 @@
+.boot-sequence,
+.boot-sequence * { box-sizing: border-box; }
+
+.boot-sequence {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: safe center;
+  padding: 24px;
+  overflow-y: auto;
+  background: #101210;
+  color: #e0e5dc;
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  animation: boot-arrive 180ms cubic-bezier(.23, 1, .32, 1) both;
+}
+
+.boot-panel {
+  position: relative;
+  width: min(100%, 860px);
+  padding: 24px 38px 20px;
+  border: 1px solid #30382f;
+  background: #151815;
+  overflow: hidden;
+}
+
+.boot-topline,
+.boot-bottomline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: #a0ab9b;
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: .09em;
+}
+
+.boot-topline { margin-bottom: 38px; }
+.boot-identifier { color: #b5d88c; }
+
+.boot-skip {
+  min-height: 38px;
+  padding: 8px 13px;
+  border: 1px solid #56624e;
+  background: transparent;
+  color: #e0e5dc;
+  font: inherit;
+  font-size: 11px;
+  letter-spacing: 0;
+  cursor: pointer;
+  transition: background-color 140ms ease, color 140ms ease, transform 140ms cubic-bezier(.23, 1, .32, 1);
+}
+
+.boot-skip:focus-visible { outline: 2px solid #b5d88c; outline-offset: 4px; }
+.boot-skip:active { transform: scale(.97); }
+@media (hover: hover) and (pointer: fine) {
+  .boot-skip:hover { background: #b5d88c; color: #101210; }
+}
+
+.boot-disclaimer {
+  margin: 0 0 12px;
+  color: #d8bd83;
+  font-size: 10px;
+  line-height: 1.7;
+  letter-spacing: .09em;
+}
+
+.boot-title {
+  min-height: 1.35em;
+  margin: 0;
+  font: 500 clamp(21px, 3.3vw, 34px) / 1.35 "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  letter-spacing: -.055em;
+}
+
+.boot-diagram { position: relative; margin: 20px 0 14px; overflow: hidden; }
+.boot-diagram::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: #b5d88c;
+  opacity: .3;
+  animation: boot-scan 2400ms linear 300ms both;
+  pointer-events: none;
+}
+
+.boot-network { display: block; width: 100%; max-height: 240px; }
+.boot-network line {
+  stroke: #718361;
+  stroke-width: 1;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: boot-connect 400ms cubic-bezier(.23, 1, .32, 1) forwards;
+}
+.boot-node { opacity: 0; animation: boot-arrive 220ms ease-out forwards; }
+.boot-node circle { fill: #151815; stroke: #b5d88c; stroke-width: 1.5; }
+.boot-node text { fill: #a0ab9b; font-size: 10px; letter-spacing: 1px; text-anchor: middle; }
+.boot-sequence[data-step="3"] .boot-node circle,
+.boot-sequence[data-step="4"] .boot-node circle { fill: #b5d88c; }
+
+.boot-log { list-style: none; margin: 0; padding: 0; border-top: 1px solid #30382f; }
+.boot-log-row {
+  display: grid;
+  grid-template-columns: 28px 1fr 24px;
+  gap: 14px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #30382f;
+  color: #76816f;
+  font-size: 12px;
+  line-height: 1.5;
+  transition: color 140ms ease;
+}
+.boot-log-row.is-current { color: #e0e5dc; }
+.boot-log-row.is-complete { color: #a0ab9b; }
+.boot-step-state { text-align: right; }
+.boot-log-row.is-current .boot-step-number,
+.boot-log-row.is-complete .boot-step-state { color: #b5d88c; }
+.boot-bottomline { margin-top: 22px; font-size: 9px; }
+.boot-timeline { position: absolute; inset: auto 0 0; height: 2px; background: #30382f; }
+.boot-timeline i { display: block; height: 100%; background: #b5d88c; transform-origin: left; animation: boot-progress 3400ms linear both; }
+
+@keyframes boot-arrive { from { opacity: 0; } to { opacity: 1; } }
+@keyframes boot-connect { to { stroke-dashoffset: 0; } }
+@keyframes boot-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes boot-scan { from { transform: translateY(0); opacity: 0; } 15% { opacity: .3; } to { transform: translateY(235px); opacity: 0; } }
+
+@media (max-width: 600px) {
+  .boot-sequence { padding: 14px; }
+  .boot-panel { padding: 18px 20px 20px; }
+  .boot-topline { align-items: flex-start; margin-bottom: 30px; gap: 10px; }
+  .boot-identifier { max-width: 120px; font-size: 9px; }
+  .boot-skip { padding: 7px 10px; white-space: nowrap; }
+  .boot-disclaimer { font-size: 9px; letter-spacing: .03em; }
+  .boot-title { min-height: 2.7em; font-size: clamp(21px, 6vw, 28px); }
+  .boot-diagram { margin: 4px -4px 18px; }
+  .boot-log-row { gap: 8px; grid-template-columns: 20px 1fr 20px; font-size: 10px; }
+  .boot-bottomline { letter-spacing: .02em; font-size: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .boot-sequence { display: none; }
+}
+.motion-paused .boot-sequence { display: none; }

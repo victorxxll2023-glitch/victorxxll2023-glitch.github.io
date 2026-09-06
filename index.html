@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfólio de Victor, estudante de cybersecurity com foco em Blue Team, Red Team, Linux e análise de ameaças."
+    />
+    <meta name="theme-color" content="#101210" />
+    <title>Victor | Cybersecurity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://github.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;450;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=hacker-20260906" />
+    <link rel="stylesheet" href="hacker-character.css?v=20260906" />
+    <link rel="stylesheet" href="boot-sequence.css?v=terminal-20260905" />
+    <script src="script.js?v=terminal-20260905" defer></script>
+    <script src="boot-sequence.js?v=terminal-20260905" defer></script>
+    <script src="hacker-character.js?v=20260906" defer></script>
+    <script src="interactive-effects.js?v=hacker-20260906" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="topbar" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="Ir para o início">
+        <span class="brand-avatar-wrap" aria-hidden="true">
+          <img class="brand-avatar" src="assets/cyber-aura-avatar.jpg" width="256" height="256" fetchpriority="high" alt="" />
+        </span>
+        <span>victor<span class="accent">@</span>cyberlab<span class="brand-path">: ~</span></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Seções do site">
+        <a href="#inicio" class="active">~/início</a>
+        <a href="#sobre">sobre.md</a>
+        <a href="#projetos">radar/</a>
+        <a href="#habilidades">ferramentas/</a>
+        <a href="#estudos">estudos/</a>
+        <a href="#rede">rede/</a>
+        <a href="#contato">contato</a>
+      </nav>
+
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="window-bar"><span><i class="status-dot" aria-hidden="true"></i> ~/victor — terminal do portfólio</span><span class="window-format">UTF-8</span></div>
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <p class="command-line"><span>victor@cyberlab</span><b>~</b>$ whoami</p>
+            <h1 id="hero-title">Victor<span class="terminal-caret" aria-hidden="true">_</span></h1>
+            <p class="hero-subtitle">Entender o ataque.<br /><span>Aprender a defender.</span></p>
+            <p class="hero-intro">Estudante de cybersecurity. Entre logs, redes e linhas de comando, exploro Blue Team e Red Team em ambientes controlados.</p>
+            <dl class="profile-properties">
+              <div><dt>foco</dt><dd>detecção / investigação / segurança ofensiva</dd></div>
+              <div><dt>base</dt><dd>Linux, Python e muita curiosidade</dd></div>
+              <div><dt>status</dt><dd><span class="learning-status">em aprendizado contínuo</span></dd></div>
+            </dl>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#estudos"><span aria-hidden="true">↳</span> Explorar estudos</a>
+              <a class="button button-secondary" href="#sobre">Ler sobre mim <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <figure class="hero-art hacker-art">
+            <div class="hacker-stage">
+              <span class="hacker-file" aria-hidden="true">~/avatar/ghost_01</span>
+              <span class="hacker-crosshair crosshair-top" aria-hidden="true"></span>
+              <span class="hacker-crosshair crosshair-bottom" aria-hidden="true"></span>
+              <div class="hacker-orbit" aria-hidden="true"></div>
+              <div class="hacker-character">
+                <img class="hacker-image" src="assets/hacker-mascot.png" width="1280" height="1280" fetchpriority="high" alt="Personagem hacker 2D de capuz preto, máscara, óculos e detalhes verdes, segurando um laptop." />
+                <img class="hacker-image hacker-slice slice-one" src="assets/hacker-mascot.png" width="1280" height="1280" alt="" aria-hidden="true" />
+                <img class="hacker-image hacker-slice slice-two" src="assets/hacker-mascot.png" width="1280" height="1280" alt="" aria-hidden="true" />
+                <svg class="hacker-scratches" viewBox="0 0 300 400" fill="none" aria-hidden="true">
+                  <path d="m97 98 43 23-24-4 43 24M107 105l37 22M207 184l-33 30 18-8-38 38M201 200l-30 28M102 284l31 22-13-2 25 16" />
+                </svg>
+              </div>
+              <span class="hacker-packet packet-one" aria-hidden="true">0x4F_</span>
+              <span class="hacker-packet packet-two" aria-hidden="true">SIGNAL LOST</span>
+              <span class="hacker-packet packet-three" aria-hidden="true">reconnect_</span>
+            </div>
+          </figure>
+        </div>
+        <div class="command-console">
+          <div class="console-guide"><span>Explore pelo terminal ou role a página.</span><span><kbd>Tab</kbd> completar <kbd>↑</kbd> histórico</span></div>
+          <div id="terminal-output" role="log" aria-live="polite" aria-relevant="additions text" aria-label="Saída dos comandos"></div>
+          <form class="terminal-form" aria-label="Terminal interativo do portfólio">
+            <label for="terminal-input"><span>visitante</span><b>@cyberlab</b>:~$</label>
+            <input id="terminal-input" name="command" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="120" placeholder="Digite help para começar…" aria-label="Comando do portfólio" aria-describedby="terminal-hint" />
+            <button type="submit" aria-label="Executar comando"><span aria-hidden="true">↵</span></button>
+          </form>
+          <div class="quick-commands" id="terminal-hint"><span>comandos:</span><button type="button" data-command="help">help</button><button type="button" data-command="whoami">whoami</button><button type="button" data-command="estudos">estudos</button><button type="button" data-command="rede">rede</button><button type="button" data-replay-boot>rever abertura</button><span class="console-local">somente neste site</span></div>
+        </div>
+      </section>
+
+      <section class="section about" id="sobre" aria-labelledby="about-title">
+        <div class="section-label reveal">
+          <span aria-hidden="true">~ /</span>
+          <p>sobre.md</p>
+        </div>
+        <div class="cyber-terminal reveal" role="region" aria-labelledby="about-title">
+          <div class="terminal-chrome">
+            <p><span aria-hidden="true">$</span> cat sobre.md</p>
+            <span>PERFIL PESSOAL</span>
+          </div>
+          <div class="terminal-screen">
+            <div class="terminal-command">
+              <p class="comment"># O que me move</p>
+              <h2 id="about-title">Curiosidade com método.</h2>
+            </div>
+            <div class="terminal-output-grid">
+              <div class="terminal-block">
+                <p class="terminal-line"><span>01</span> Observar. Questionar. Entender.</p>
+                <div class="terminal-output">
+                  <p>Transformar logs, tráfego de rede e eventos de endpoints em contexto para compreender ataques e fortalecer defesas.</p>
+                  <p>Praticar técnicas ofensivas apenas em CTFs, máquinas próprias e laboratórios com autorização explícita.</p>
+                </div>
+              </div>
+              <div class="terminal-block">
+                <p class="terminal-line"><span>02</span> Minha trilha de estudo</p>
+                <ul class="terminal-list">
+                  <li><span>[01]</span><strong>Blue Team</strong><small>monitoramento · detecção · resposta</small></li>
+                  <li><span>[02]</span><strong>Red Team</strong><small>reconhecimento · testes autorizados</small></li>
+                  <li><span>[03]</span><strong>Security Lab</strong><small>Linux · Python · Wazuh</small></li>
+                </ul>
+              </div>
+            </div>
+            <div class="terminal-status">
+              <span><i aria-hidden="true"></i> APRENDENDO EM PÚBLICO</span>
+              <a href="#estudos">open ./ferramentas-e-estudos <span aria-hidden="true">↵</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="facts reveal" aria-label="Informações rápidas">
+          <article>
+            <span class="fact-icon" aria-hidden="true">[01]</span>
+            <p>Área de estudo</p>
+            <strong>Cybersecurity</strong>
+          </article>
+          <article>
+            <span class="fact-icon" aria-hidden="true">[02]</span>
+            <p>Defesa</p>
+            <strong>Blue Team &amp; SOC</strong>
+          </article>
+          <article>
+            <span class="fact-icon" aria-hidden="true">[03]</span>
+            <p>Ofensiva</p>
+            <strong>Red Team &amp; CTFs</strong>
+          </article>
+          <article class="fact-highlight">
+            <span class="fact-icon" aria-hidden="true">[04]</span>
+            <p>Ferramentas-base</p>
+            <strong>Linux · Python · Wazuh</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="section projects" id="projetos" aria-labelledby="projects-title">
+        <div class="section-label reveal">
+          <span aria-hidden="true">~ /</span>
+          <p>radar/leituras</p>
+        </div>
+        <div class="projects-heading reveal">
+          <h2 id="projects-title">No meu radar<span class="accent">.</span></h2>
+          <p>Leituras para entender o cenário de ameaças. Fontes abertas, perguntas novas.</p>
+        </div>
+
+        <div class="project-list">
+          <a class="project-card reveal" href="https://genai.owasp.org/2025/12/09/owasp-genai-security-project-releases-top-10-risks-and-mitigations-for-agentic-ai-security/" target="_blank" rel="noreferrer" aria-label="Ler sobre segurança de IA e agentes na OWASP">
+            <div class="project-index">01 / 03</div>
+            <div class="project-info">
+              <div>
+                <p class="project-type">OWASP / Agentic AI / 2025</p>
+                <h3>Quem protege os agentes de IA?</h3>
+              </div>
+              <p>Injeção de instruções, abuso de ferramentas e permissões: novos riscos quando a IA deixa de apenas responder e passa a agir.</p>
+              <ul aria-label="Tecnologias">
+                <li>Agentic AI</li><li>Prompt injection</li><li>Privilégios</li>
+              </ul>
+            </div>
+            <span class="project-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="project-card reveal" href="https://www.microsoft.com/en-us/corporate-responsibility/cybersecurity/microsoft-digital-defense-report-2025" target="_blank" rel="noreferrer" aria-label="Ler sobre ataques de identidade no Microsoft Digital Defense Report">
+            <div class="project-index">02 / 03</div>
+            <div class="project-info">
+              <div>
+                <p class="project-type">Microsoft / Digital Defense Report / 2025</p>
+                <h3>Identidades sob ataque</h3>
+              </div>
+              <p>Password spray, roubo de sessão e infostealers mantêm credenciais e acessos no centro da defesa.</p>
+              <ul aria-label="Tecnologias">
+                <li>Infostealers</li><li>MFA</li><li>Passkeys</li>
+              </ul>
+            </div>
+            <span class="project-arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="project-card reveal" href="https://www.enisa.europa.eu/publications/enisa-threat-landscape-2025" target="_blank" rel="noreferrer" aria-label="Ler o panorama de ameaças 2025 da ENISA">
+            <div class="project-index">03 / 03</div>
+            <div class="project-info">
+              <div>
+                <p class="project-type">ENISA / Threat Landscape / 2025</p>
+                <h3>Ransomware &amp; exposição</h3>
+              </div>
+              <p>Phishing, falhas exploradas e dependências de terceiros continuam abrindo caminho para intrusão e extorsão.</p>
+              <ul aria-label="Tecnologias">
+                <li>Ransomware</li><li>Vulnerabilidades</li><li>Supply Chain</li>
+              </ul>
+            </div>
+            <span class="project-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <p class="project-note reveal"><span aria-hidden="true">↳</span> Referências de estudo, não projetos de minha autoria. Cada entrada abre a publicação oficial.</p>
+        <div class="repo-strip"><p><strong>Também estou construindo meu acervo.</strong>Write-ups e um guia de cybersecurity no meu GitHub.</p><a href="https://github.com/victorxxll2023-glitch?tab=repositories" target="_blank" rel="noreferrer">Ver meus repositórios ↗</a></div>
+      </section>
+
+      <section class="section skills" id="habilidades" aria-labelledby="skills-title">
+        <div class="section-label reveal">
+          <span aria-hidden="true">~ /</span>
+          <p>ferramentas/</p>
+        </div>
+        <div class="skills-layout">
+          <div class="skills-intro reveal">
+            <h2 id="skills-title">Do alerta<br />à resposta<span class="accent">.</span></h2>
+            <p>Minha trilha conecta telemetria, análise e testes para entender o ataque e fortalecer a defesa.</p>
+          </div>
+
+          <div class="capabilities">
+            <article class="capability reveal">
+              <span class="cap-number">01</span>
+              <div>
+                <h3>Monitorar</h3>
+                <p>Coletar eventos, reconhecer o comportamento normal e dar contexto aos alertas que importam.</p>
+              </div>
+              <p class="cap-tags">Wazuh · SIEM · Blue Team</p>
+            </article>
+            <article class="capability reveal">
+              <span class="cap-number">02</span>
+              <div>
+                <h3>Investigar</h3>
+                <p>Correlacionar logs, pacotes e indicadores para formular hipóteses e preservar evidências.</p>
+              </div>
+              <p class="cap-tags">Wireshark · DFIR · MITRE ATT&amp;CK</p>
+            </article>
+            <article class="capability reveal">
+              <span class="cap-number">03</span>
+              <div>
+                <h3>Testar</h3>
+                <p>Simular técnicas em ambientes autorizados, validar controles e documentar formas de correção.</p>
+              </div>
+              <p class="cap-tags">Nmap · Burp Suite · OWASP</p>
+            </article>
+          </div>
+        </div>
+
+        <ul class="stack-cloud reveal" id="cyber-tools" aria-label="Ferramentas de cybersecurity que estudo">
+          <li class="stack-tool">
+            <span class="stack-tool-icon"><img src="assets/wazuh.svg" width="42" height="42" loading="lazy" alt="" /></span>
+            <span><strong>Wazuh</strong><small>SIEM · XDR</small></span>
+          </li>
+          <li class="stack-tool">
+            <span class="stack-tool-icon"><img src="assets/nmap.svg" width="42" height="42" loading="lazy" alt="" /></span>
+            <span><strong>Nmap</strong><small>Network discovery</small></span>
+          </li>
+          <li class="stack-tool">
+            <span class="stack-tool-icon"><img src="assets/wireshark.svg" width="42" height="42" loading="lazy" alt="" /></span>
+            <span><strong>Wireshark</strong><small>Packet analysis</small></span>
+          </li>
+          <li class="stack-tool">
+            <span class="stack-tool-icon"><img src="assets/burp-suite.svg" width="42" height="42" loading="lazy" alt="" /></span>
+            <span><strong>Burp Suite</strong><small>Web security</small></span>
+          </li>
+          <li class="stack-tool">
+            <span class="stack-tool-icon"><img src="assets/suricata.svg" width="42" height="42" loading="lazy" alt="" /></span>
+            <span><strong>Suricata</strong><small>IDS · IPS · NSM</small></span>
+          </li>
+          <li class="stack-tool">
+            <span class="stack-tool-icon"><img src="assets/mitre-attack.svg" width="42" height="42" loading="lazy" alt="" /></span>
+            <span><strong>MITRE ATT&amp;CK</strong><small>Tactics · techniques</small></span>
+          </li>
+          <li class="stack-tool">
+            <span class="stack-tool-icon"><img src="assets/linux.svg" width="42" height="42" loading="lazy" alt="" /></span>
+            <span><strong>Linux</strong><small>Security lab</small></span>
+          </li>
+          <li class="stack-tool">
+            <span class="stack-tool-icon"><img src="assets/python-security.svg" width="42" height="42" loading="lazy" alt="" /></span>
+            <span><strong>Python</strong><small>Automation · parsing</small></span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section learning" id="estudos" aria-labelledby="learning-title">
+        <div class="section-label reveal">
+          <span aria-hidden="true">~ /</span>
+          <p>estudos/laboratório</p>
+        </div>
+        <div class="learning-heading reveal">
+          <h2 id="learning-title">Um comando de cada vez<span class="accent">.</span></h2>
+        </div>
+        <p class="learning-intro reveal">
+          Ferramentas e fundamentos que pratico em laboratórios controlados para aprender defesa, ataque e investigação.
+        </p>
+
+        <div class="gallery-stage reveal">
+          <button class="gallery-nav gallery-prev" type="button" aria-label="Ver estudo anterior">
+            <span class="gallery-nav-icon" aria-hidden="true">←</span>
+            <span class="gallery-nav-label">Anterior</span>
+          </button>
+          <div class="learning-gallery" tabindex="0" aria-label="Galeria de estudos de cybersecurity. Arraste, deslize ou use as setas do teclado.">
+            <article class="learning-card linux-card">
+              <img src="assets/linux.svg" width="180" height="180" loading="lazy" alt="Logotipo do Linux" />
+              <span class="learning-index">01</span>
+              <div><p>Sistemas &amp; terminal</p><h3>Linux &amp; Shell</h3><small>Comandos, permissões, processos e automação.</small></div>
+            </article>
+            <article class="learning-card python-card">
+              <img src="assets/python-security.svg" width="180" height="180" loading="lazy" alt="Símbolo de Python para segurança" />
+              <span class="learning-index">02</span>
+              <div><p>Automação &amp; análise</p><h3>Python</h3><small>Scripts, parsing de logs e automação de tarefas repetitivas.</small></div>
+            </article>
+            <article class="learning-card wazuh-card">
+              <img src="assets/wazuh.svg" width="180" height="180" loading="lazy" alt="Símbolo do Wazuh" />
+              <span class="learning-index">03</span>
+              <div><p>SIEM &amp; XDR</p><h3>Wazuh</h3><small>Telemetria, alertas, integridade de arquivos e vulnerabilidades.</small></div>
+            </article>
+            <article class="learning-card nmap-card">
+              <img src="assets/nmap.svg" width="180" height="180" loading="lazy" alt="Radar representando o Nmap" />
+              <span class="learning-index">04</span>
+              <div><p>Descoberta de rede</p><h3>Nmap</h3><small>Hosts, portas e serviços em redes próprias ou autorizadas.</small></div>
+            </article>
+            <article class="learning-card wireshark-card">
+              <img src="assets/wireshark.svg" width="180" height="180" loading="lazy" alt="Onda de pacotes representando o Wireshark" />
+              <span class="learning-index">05</span>
+              <div><p>Análise de tráfego</p><h3>Wireshark</h3><small>Captura, filtros, protocolos e investigação de pacotes.</small></div>
+            </article>
+            <article class="learning-card burp-card">
+              <img src="assets/burp-suite.svg" width="180" height="180" loading="lazy" alt="Símbolo de proxy representando o Burp Suite" />
+              <span class="learning-index">06</span>
+              <div><p>Segurança web</p><h3>Burp Suite</h3><small>Inspeção de HTTP e testes manuais em aplicações de laboratório.</small></div>
+            </article>
+            <article class="learning-card mitre-card">
+              <img src="assets/mitre-attack.svg" width="180" height="180" loading="lazy" alt="Matriz representando o MITRE ATT&CK" />
+              <span class="learning-index">07</span>
+              <div><p>Táticas &amp; técnicas</p><h3>MITRE ATT&amp;CK</h3><small>Uma linguagem comum para mapear comportamento adversário e detecções.</small></div>
+            </article>
+            <article class="learning-card suricata-card">
+              <img src="assets/suricata.svg" width="180" height="180" loading="lazy" alt="Olho de monitoramento representando o Suricata" />
+              <span class="learning-index">08</span>
+              <div><p>IDS · IPS · NSM</p><h3>Suricata</h3><small>Monitoramento de rede, regras e detecção de tráfego suspeito.</small></div>
+            </article>
+          </div>
+          <button class="gallery-nav gallery-next" type="button" aria-label="Ver próximo estudo">
+            <span class="gallery-nav-label">Próximo</span>
+            <span class="gallery-nav-icon" aria-hidden="true">→</span>
+          </button>
+        </div>
+        <div class="gallery-meta">
+          <p class="gallery-hint"><span aria-hidden="true">↔</span> Arraste ou deslize</p>
+          <div class="gallery-progress" aria-hidden="true"><i></i></div>
+          <output class="gallery-count" aria-live="polite" aria-atomic="true">01 / 08</output>
+        </div>
+      </section>
+
+      <section class="section network" id="rede" aria-labelledby="network-title">
+        <div class="section-label reveal">
+          <span aria-hidden="true">~ /</span>
+          <p>rede/referências</p>
+        </div>
+        <div class="network-layout">
+          <div class="network-copy reveal">
+            <p class="command-line"><span>$</span> explore --community br</p>
+            <h2 id="network-title">Ninguém aprende<br />sozinho<span class="accent">.</span></h2>
+            <p>
+              Uma constelação de brasileiras e brasileiros que fortalecem tecnologia, educação, código aberto e
+              segurança digital. Arraste a esfera e selecione um perfil para conhecer sua história.
+            </p>
+            <p class="network-note">Segurança, código aberto e educação.<br />Referências que compartilham conhecimento.</p>
+            <p class="network-instructions"><kbd>↔</kbd> Arraste para girar<br /><kbd>↵</kbd> Selecione uma pessoa para saber mais</p>
+          </div>
+          <div class="sphere-wrap reveal" id="constelacao">
+            <div class="sphere-aura" aria-hidden="true"></div>
+            <div class="image-sphere" role="group" aria-label="Referências brasileiras de tecnologia em uma esfera interativa">
+              <button class="sphere-person" type="button" aria-label="Ver resumo de Fábio Akita" aria-controls="sphere-profile" aria-expanded="false" data-title="Fábio Akita" data-role="Arquitetura &amp; conteúdo" data-summary="Desenvolvedor, empreendedor e criador do AkitaOnRails. Tornou temas profundos de computação, carreira e engenharia de software mais acessíveis para a comunidade brasileira." data-github="https://github.com/akitaonrails"><img src="https://github.com/akitaonrails.png?size=160" width="96" height="96" loading="lazy" alt="Fábio Akita" /></button>
+              <button class="sphere-person" type="button" aria-label="Ver resumo de Filipe Deschamps" aria-controls="sphere-profile" aria-expanded="false" data-title="Filipe Deschamps" data-role="Educação &amp; comunidade" data-summary="Desenvolvedor e criador de conteúdo conhecido por ensinar programação de forma prática. Criou projetos educacionais e espaços de comunidade que aproximam novas pessoas da tecnologia." data-github="https://github.com/filipedeschamps"><img src="https://github.com/filipedeschamps.png?size=160" width="96" height="96" loading="lazy" alt="Filipe Deschamps" /></button>
+              <button class="sphere-person" type="button" aria-label="Ver resumo de Diego Fernandes" aria-controls="sphere-profile" aria-expanded="false" data-title="Diego Fernandes" data-role="Web &amp; educação" data-summary="Desenvolvedor e educador focado em tecnologias web e mobile. Seu trabalho com aulas, eventos e comunidade ajudou milhares de pessoas brasileiras a entrar e evoluir na programação." data-github="https://github.com/diego3g"><img src="https://github.com/diego3g.png?size=160" width="96" height="96" loading="lazy" alt="Diego Fernandes" /></button>
+              <button class="sphere-person" type="button" aria-label="Ver resumo de Loiane Groner" aria-controls="sphere-profile" aria-expanded="false" data-title="Loiane Groner" data-role="Java &amp; Angular" data-summary="Engenheira de software, autora e educadora. Compartilha há anos cursos gratuitos, livros e artigos sobre Java, Angular e desenvolvimento, além de contribuir ativamente com comunidades técnicas." data-github="https://github.com/loiane"><img src="https://github.com/loiane.png?size=160" width="96" height="96" loading="lazy" alt="Loiane Groner" /></button>
+              <button class="sphere-person" type="button" aria-label="Ver resumo de Erick Wendel" aria-controls="sphere-profile" aria-expanded="false" data-title="Erick Wendel" data-role="JavaScript &amp; Node.js" data-summary="Educador JavaScript, palestrante e integrante ativo do ecossistema Node.js. Produz conteúdo técnico avançado e projetos abertos que ajudam a elevar o nível da comunidade." data-github="https://github.com/ErickWendel"><img src="https://github.com/ErickWendel.png?size=160" width="96" height="96" loading="lazy" alt="Erick Wendel" /></button>
+              <button class="sphere-person" type="button" aria-label="Ver resumo de Fernanda Kipper" aria-controls="sphere-profile" aria-expanded="false" data-title="Fernanda Kipper" data-role="Software &amp; conteúdo" data-summary="Engenheira de software e criadora de conteúdo. Compartilha projetos e tutoriais sobre backend, Java, inteligência artificial e cloud, incentivando uma nova geração de pessoas desenvolvedoras." data-github="https://github.com/Fernanda-Kipper"><img src="https://github.com/Fernanda-Kipper.png?size=160" width="96" height="96" loading="lazy" alt="Fernanda Kipper" /></button>
+              <button class="sphere-person" type="button" aria-label="Ver resumo de Mayk Brito" aria-controls="sphere-profile" aria-expanded="false" data-title="Mayk Brito" data-role="Full stack &amp; educação" data-summary="Engenheiro de software e instrutor com forte atuação em JavaScript, React e Node.js. É reconhecido pela didática acolhedora e pelo impacto na formação de pessoas iniciantes." data-github="https://github.com/maykbrito"><img src="https://github.com/maykbrito.png?size=160" width="96" height="96" loading="lazy" alt="Mayk Brito" /></button>
+              <button class="sphere-person" type="button" aria-label="Ver resumo de Gustavo Guanabara" aria-controls="sphere-profile" aria-expanded="false" data-title="Gustavo Guanabara" data-role="Educação para iniciantes" data-summary="Professor e criador do Curso em Vídeo. Democratizou o acesso a aulas gratuitas de programação e informática, tornando-se uma das principais portas de entrada para estudantes brasileiros." data-github="https://github.com/gustavoguanabara"><img src="https://github.com/gustavoguanabara.png?size=160" width="96" height="96" loading="lazy" alt="Gustavo Guanabara" /></button>
+              <button class="sphere-person" type="button" aria-label="Ver resumo de Rodrigo Branas" aria-controls="sphere-profile" aria-expanded="false" data-title="Rodrigo Branas" data-role="Arquitetura de software" data-summary="Arquiteto de software, professor, autor e palestrante. Compartilha conhecimento aprofundado sobre JavaScript, TypeScript, testes, design de software e boas práticas de engenharia." data-github="https://github.com/rodrigobranas"><img src="https://github.com/rodrigobranas.png?size=160" width="96" height="96" loading="lazy" alt="Rodrigo Branas" /></button>
+              <button class="sphere-person" type="button" aria-label="Ver resumo de Nina da Hora" aria-controls="sphere-profile" aria-expanded="false" data-title="Nina da Hora" data-role="IA &amp; direitos digitais" data-summary="Cientista da computação e pesquisadora de inteligência artificial, justiça algorítmica e direitos digitais. Defende tecnologias responsáveis, auditáveis e construídas com participação social." data-github="https://github.com/NinadHora"><img src="https://github.com/NinadHora.png?size=160" width="96" height="96" loading="lazy" alt="Nina da Hora" /></button>
+              <button class="sphere-person" type="button" aria-label="Ver resumo de Fernando Mercês" aria-controls="sphere-profile" aria-expanded="false" data-title="Fernando Mercês" data-role="Segurança &amp; engenharia reversa" data-summary="Pesquisador de segurança e fundador da Mente Binária. Ajuda a comunidade com educação gratuita, pesquisa, ferramentas abertas e conteúdo técnico sobre malware e engenharia reversa." data-github="https://github.com/merces"><img src="https://github.com/merces.png?size=160" width="96" height="96" loading="lazy" alt="Fernando Mercês" /></button>
+              <button class="sphere-person" type="button" aria-label="Ver resumo de Daniel Donda" aria-controls="sphere-profile" aria-expanded="false" data-title="Daniel Donda" data-role="Defesa cibernética" data-summary="Especialista em defesa cibernética, educador e autor de materiais abertos para quem está começando em segurança. Mantém guias e projetos que organizam conhecimento prático de cybersecurity." data-github="https://github.com/danieldonda"><img src="https://github.com/danieldonda.png?size=160" width="96" height="96" loading="lazy" alt="Daniel Donda" /></button>
+            </div>
+            <div class="sphere-label" aria-live="polite"><strong>Giro automático · arraste para explorar</strong><span>Constelação brasileira</span></div>
+            <article class="sphere-profile" id="sphere-profile" aria-live="polite" hidden>
+              <button class="sphere-profile-close" type="button" aria-label="Fechar resumo">×</button>
+              <div class="sphere-profile-heading">
+                <img src="assets/github.svg" width="64" height="64" alt="" />
+                <div>
+                  <p class="sphere-profile-role"></p>
+                  <h3 class="sphere-profile-name" tabindex="-1"></h3>
+                </div>
+              </div>
+              <p class="sphere-profile-summary"></p>
+              <a class="sphere-profile-link" href="#" target="_blank" rel="noreferrer">Abrir perfil no GitHub <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contato" aria-labelledby="contact-title">
+        <div class="window-bar"><span>$ cat contato.conf</span><span>CONEXÕES</span></div>
+        <div class="contact-content">
+        <p class="comment"># Uma conversa também é um ponto de partida.</p>
+        <h2 id="contact-title">Vamos trocar conhecimento<span class="accent">?</span></h2>
+        <p class="contact-copy reveal">
+          Estou aberto a oportunidades, comunidades, estudos e boas conversas sobre segurança da informação.
+        </p>
+        <p class="contact-pending"><span aria-hidden="true">[ + ]</span> Me encontre no GitHub e no LinkedIn. Instagram: em breve.</p>
+        <div class="contact-links" aria-label="Meus canais de contato">
+          <a href="https://github.com/victorxxll2023-glitch" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.97.1-.75.4-1.26.73-1.55-2.57-.3-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.16 1.18A10.98 10.98 0 0 1 12 6.13c.98 0 1.95.13 2.87.39 2.2-1.49 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.78 1.07.78 2.16v3.24c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .7Z" /></svg>GitHub <span aria-hidden="true">↗</span></a>
+          <a href="https://www.linkedin.com/in/victor-hugo-053686306/" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V8.99h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.37 4.27 5.46v6.28ZM5.32 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.1 20.45H3.54V8.99H7.1v11.46Z" /></svg>LinkedIn <span aria-hidden="true">↗</span></a>
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2"/></svg>Instagram <small>pendente</small></span>
+        </div></div>
+      </section>
+    </main>
+
+    <footer>
+      <p><span class="accent">victor@cyberlab</span> · <span id="year"></span></p>
+      <span class="footer-note">Sempre em modo de aprendizado.</span>
+      <a href="#inicio">cd ~ <span aria-hidden="true">↑</span><span class="sr-only">Voltar ao início</span></a>
+    </footer>
+
+    <div class="cursor-follower" aria-hidden="true"></div>
+  </body>
+</html>
